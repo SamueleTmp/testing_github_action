@@ -1,8 +1,0 @@
-on: 
- pull:
-  branches: ["main"]
-
-jobs:
- steps:
-    name: TEST_2
-    run: echo "test_2 is RUN!"
