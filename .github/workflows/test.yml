@@ -2,11 +2,8 @@ name: CI_CD
 
 # Controls when the workflow will run
 on:
-  push:
-    branches: 
-      - "major/*"
-      - "minor/*"
-      - "fixed/*"
+  create:
+    branches: ["main"]
     tags:
       - v*.*.*
       
