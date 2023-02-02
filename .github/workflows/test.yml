@@ -3,10 +3,8 @@ name: CI_CD
 # Controls when the workflow will run
 on:
   create:
-    branches: ["main"]
-    tags:
-      - v*.*.*
-      
+    branches: 
+     -"major/*"
 
 jobs:
   build:
