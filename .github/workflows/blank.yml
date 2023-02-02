@@ -31,7 +31,7 @@ jobs:
          VAR2="major-"
          if [[$VAR1 = "major-"*]]; then echo "nome validito"
          else echo "nome NON valido" 
-         git switch main
+         git switch -c main
          git branch --delete $VAR1
          fi
          
