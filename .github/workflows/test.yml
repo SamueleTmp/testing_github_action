@@ -2,9 +2,8 @@ name: CI_CD
 
 # Controls when the workflow will run
 on:
-  create:
-    branches: 
-     -"major/*"
+  branch_protection_rule:
+    types: [created]
 
 jobs:
   build:
