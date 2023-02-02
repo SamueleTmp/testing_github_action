@@ -30,7 +30,9 @@ jobs:
          VAR1=${GITHUB_REF##*/}
          VAR2="major-"
          if [[$VAR1 = "major-"*]]; then echo "nome validito"
-         else echo "nome NON valido" && git branch --delete $VAR1
+         else echo "nome NON valido" 
+         git checkout main
+         git branch --delete $VAR1
          fi
          
 
