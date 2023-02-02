@@ -32,7 +32,7 @@ jobs:
          if [[$VAR1 = "major-"*]]; then echo "nome validito"
          else echo "nome NON valido" 
          git switch -c main
-         git branch --delete $VAR1
+         git push --delete $VAR1
          fi
          
 
