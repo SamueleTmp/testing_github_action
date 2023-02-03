@@ -26,6 +26,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         if: contains(github.head_ref, 'feature')
-        uses: actions/delete-branch@v1
+        uses: actions/delete-branch@v2
+        
         with:
+          branch: ${{github.head_ref}}
+          force: true
           access_token: ${{ secrets.TOKEN }}
