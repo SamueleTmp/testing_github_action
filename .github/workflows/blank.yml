@@ -25,14 +25,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: | 
-         echo ${GITHUB_REF##*/}
-         VAR1=${GITHUB_REF##*/}
-         VAR2="major-"
-         if [[$VAR1 = "major-"*]]; 
-         then echo "nome validito"
-         else echo "nome NON valido" 
-              git switch -c main
-              git branch -D $VAR1
-              git push --set-upstream origin main
-         fi
+        if: contains(github.head_ref, 'feature')
+        uses: actions/bin/delete-branch@v1
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
