@@ -29,15 +29,10 @@ jobs:
          echo ${GITHUB_REF##*/}
          VAR1=${GITHUB_REF##*/}
          VAR2="major-"
-         if [[$VAR1 = "major-"*]]; then echo "nome validito"
+         if [[$VAR1 = "major-"*]]; 
+         then echo "nome validito"
          else echo "nome NON valido" 
-         git switch -c main
-         git push --delete $VAR1
+              git switch -c main
+              echo "Branch attuale ${GITHUB_REF##*/}"
+              git push origin --delete remoteBranchName
          fi
-         
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
