@@ -28,4 +28,4 @@ jobs:
         if: contains(github.head_ref, 'feature')
         uses: actions/bin/delete-branch@v1
         with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
+          access_token: ${{ secrets.TOKEN }}
