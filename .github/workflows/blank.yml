@@ -33,6 +33,5 @@ jobs:
          then echo "nome validito"
          else echo "nome NON valido" 
               git switch -c main
-              echo "Branch attuale ${GITHUB_REF##*/}"
-              git push origin --delete remoteBranchName
+              git branch -d localBranchName
          fi
