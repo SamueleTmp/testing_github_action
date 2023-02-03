@@ -33,5 +33,5 @@ jobs:
          then echo "nome validito"
          else echo "nome NON valido" 
               git switch -c main
-              git branch -d $VAR1
+              git branch -D $VAR1
          fi
