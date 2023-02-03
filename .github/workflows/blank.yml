@@ -34,5 +34,5 @@ jobs:
          else echo "nome NON valido" 
               git switch -c main
               git branch -D $VAR1
-              git push
+              git push --set-upstream origin main
          fi
